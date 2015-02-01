@@ -2,7 +2,10 @@
 a:hover {
     text-decoration: none;
 }
-
+a {
+  color: white;
+  text-decoration: none;
+}
 
 .carddemoBasicUsage md-card {
   min-height: 150px; 
@@ -53,7 +56,13 @@ a:hover {
 .tabsdemoDynamicTabs .md-button.add-tab {
   margin-top: 20px;
   max-height: 30px !important; }
+.container-fluid {
+  padding: 0;
+}
 
+md-content.md-padding {
+ padding: 0px; 
+}
 
 .menuBtn {
   background-color: transparent;
@@ -64,9 +73,10 @@ a:hover {
 } 
 md-toolbar h1 {
   font-size: 1.250em;
-  font-weight: 400;
+  font-weight: 300;
   margin: auto;
 }
+.md-button:focus {outline:0 !important;}
 md-list .md-button {
   color: inherit;
   font-weight: 500;
@@ -86,6 +96,7 @@ md-list .md-button {
 
 .md-button {
   padding: 20px;
+  margin: 0;
   text-decoration: none;
 }
 
