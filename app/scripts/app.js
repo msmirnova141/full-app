@@ -16,7 +16,7 @@ var beerAppApp = angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial',
+    'ngMaterial'
 
     
   ])
@@ -34,6 +34,10 @@ var beerAppApp = angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
+      .when('/beer', {
+        templateUrl: 'views/beerinfo.html',
+        controller: 'beerCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -44,8 +48,9 @@ var beerAppApp = angular
 
 
 
+
   beerAppApp.config(function($mdThemingProvider) {
   $mdThemingProvider.theme('default')
     .primaryColor('orange')
-    .accentColor('orange');
+    .accentColor('grey');
 });

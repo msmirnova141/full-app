@@ -29,3 +29,4 @@ beerAppApp.controller('RightCtrl', function($scope, $timeout, $mdSidenav, $log) 
                         });
   };
 });
+

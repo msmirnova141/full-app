@@ -13,5 +13,5 @@ beerAppApp.controller('ContactCtrl', function ($scope) {
       'AngularJS',
       'Karma'
     ];
-    console.log("test ontact");
+    
   });

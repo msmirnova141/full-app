@@ -31,31 +31,61 @@
 <!--     <div class="container">
       <div class="header"> -->
 <body layout="column" ng-controller="AppCtrl">
-    <md-toolbar layout="row">
+    <md-toolbar layout="row" >
       <button ng-click="toggleLeft()" hide-gt-sm class="menuBtn">
         <span class="visuallyhidden">Menu</span>
       </button>
-      <h1>ST.AUGUSTINES</h1>
+      <h1 style="color: white;" align="center">Live Beer Menu    </h1>
+
+      <md-button ng-click="toggleRight()" hide-gt-sm class='searchBtn' style='color: white;'><i class="fa fa-search"></i></md-button>
+
     </md-toolbar>
     <div layout="row" flex>
     <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
     <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools"></h1>
+        <h1 class="md-toolbar-tools" style='color: white;' align="center"></h1>
       </md-toolbar>
 
       
         
          <md-content ng-controller="LeftCtrl">
+         <div layout="column" class="container-fluid" style="background-color: black;">
 
-         <div layout="column" class="container-fluid">
-          <md-button class="md-primary" ng-click="close()"  ng-href="#/" hide-gt-md>Live Beer Menu</md-button> 
+         <md-button class="md-primary" ng-click="close()"  ng-href="#/" hide-gt-md><span class="typcn typcn-beer"><br>LIVE BEER MENU</span></md-button><md-button ng-href="#/about" class="md-primary" ng-click="close()"><span class="typcn typcn-info-large"><br>about</span></md-button>
+          <md-button ng-href="#/contact"  class="md-primary"ng-click="close()"><span class="typcn typcn-location"><br>FIND US</span></md-button>
+   
+          <!-- <md-button class="md-primary" ng-click="close()"  ng-href="#/" hide-gt-md>Live Beer Menu</md-button> 
           <md-button ng-href="#/about" class="md-primary" ng-click="close()">About</md-button>
-          <md-button ng-href="#/contact"  class="md-primary"ng-click="close()">Contact</md-button>
+          
+          <md-button ng-href="#/contact"  class="md-primary"ng-click="close()">Contact</md-button> -->
           </div>
           </md-content>
         </md-sidenav>
+
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light">
+        <form name="searchForm">
+        <md-input-container flex><label><i class="fa fa-search"></i>  search</label><input ng-model="search.search"></md-input-container></form>
+        </md-toolbar>
+        <md-content ng-controller="RightCtrl" class="md-padding">
+        <div layout="column" class="container-fluid">
+          <md-content class="md-padding" style="font-size:16px; padding-left: 15px; padding-top: 20px;">FILTER BY TYPE</md-content>
+          <md-divider ng-if="!$last"></md-divider>
+          <md-checkbox class="md-primary" ng-model="data.cb1" aria-label="Checkbox 1">PALE ALES</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb2" aria-label="Checkbox 1">INDIA PALE ALES</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb3" aria-label="Checkbox 1">STOUTS</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb4" aria-label="Checkbox 1">CIDERS</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb5" aria-label="Checkbox 1">LARGERS</md-checkbox>
+          <md-content class="md-padding" style="font-size:16px; padding-left: 15px; padding-top: 20px;">FILTER BY REGION</md-content>
+          <md-divider ng-if="!$last"></md-divider>
+          <md-checkbox class="md-primary" ng-model="data.cb6" aria-label="Checkbox 1">BRITISH COLUMBIA</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb7" aria-label="Checkbox 1">CALIFORNIA</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb8" aria-label="Checkbox 1">OREGON</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb9" aria-label="Checkbox 1">WASHINGTON</md-checkbox>
+          </div>
+      </md-sidenav>
   
-     <div layout="column" flex md-theme="red" id="content">
+     <div layout="column" flex  id="content">
             <md-content layout="column" flex class="md-padding">
            
                <div ng-view="">
