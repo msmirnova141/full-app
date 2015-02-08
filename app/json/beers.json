@@ -1,0 +1,23 @@
+ [
+         {"id": 1,"name":"33 ACRES OF OCEAN", "info": "West Coast Pale ale", "type":"Pale ale", "popularity":"5", "status":41, "region":"BC"},
+         {"id": 2,"name":"SMOOTH CRIMINAL","info": "Dry Irish Stout", "type":"Stout", "popularity":"3.6", "status":92, "region":"BC"},
+         {"id": 3,"name":"LIGHTS OUT STOUT", "type":"Stout", "popularity":"4.7", "status":66, "region":"Oregon"},
+         {"id": 4,"name":"N2 SERIES", "type":"Stout", "popularity":"5", "status":23, "region":"BC"},
+         {"id": 5,"name":"OLD RASPUTIN Russian Imperial Stout", "type":"Stout", "popularity":"2.3", "status":16, "region":"CA"},
+         {"id": 6,"name":"PERFECT STORM Outmeal Stout", "type":"Stout", "popularity":"3.7", "status":13, "region":"BC"},
+         {"id": 7,"name":"SCRUMPY", "type":"Cider", "popularity":"4", "status":78, "region":"BC"},
+         {"id": 8,"name":"TRADITIONAL CIDER","type":"Cider", "popularity":"5", "status":73, "region":"BC"},
+         {"id": 9,"name":"HALLELUJAH HOPRICOT CIDER", "type":"Cider", "popularity":"4", "status":39, "region":"Oregon"},
+         {"id": 10,"name":"33 ACRES OF DARKNESS SCHWARZBIER", "type":"Larger", "popularity":"4.9", "status":100, "region":"BC"},
+         {"id": 11,"name":"HOPARAZZI INDIA PALE LAGER", "type":"Larger", "popularity":"3.6", "status":77, "region":"BC"},
+         {"id": 12,"name":"PILSNER","type":"Larger", "popularity":"4.4", "status":74, "region":"BC"},
+         {"id": 13,"name":"LARGER","type":"Larger", "popularity":"4.8", "status":13, "region":"BC"},
+         {"id": 14,"name":"EURO TRASH IPL", "type":"Larger", "popularity":"2", "status":11, "region":"Oregon"},
+         {"id": 15,"name":"FAT TUG IPA", "type":"India Pale Ale", "popularity":"3", "status":90, "region":"BC"},
+         {"id": 16,"name":"THE IMMORTAL IPA", "type":"India Pale Ale", "popularity":"4", "status":84, "region":"WA"},
+         {"id": 17,"name":"GO TO IPA", "type":"India Pale Ale", "popularity":"4.3", "status":24, "region":"CA"},
+         {"id": 18,"name":"AMNESIAC DOUBLE IPA", "type":"India Pale Ale", "popularity":"3", "status":17, "region":"BC"},
+         {"id": 19,"name":"HOPDEMONIUM IPA", "type":"india Pale Ale", "popularity":"3", "status":0, "region":"BC"},
+         {"id": 20,"name":"ALE", "type":"Pale ale", "popularity":"5", "status":85, "region":"BC"},
+         {"id": 21,"name":"ESB", "type":"Pale ale", "popularity":"4.1", "status":61, "region":"BC"}
+]

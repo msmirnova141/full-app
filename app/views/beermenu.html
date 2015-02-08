@@ -3,17 +3,38 @@
 
 <div ng-controller="sort2">
 
-
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+        <md-toolbar class="md-theme-light">
+        <form name="searchForm">
+        <md-input-container flex><label><i class="fa fa-search"></i>  search</label><input ng-model="searchText"></md-input-container></form>
+        </md-toolbar>
+        <md-content ng-controller="RightCtrl" class="md-padding">
+        <div layout="column" class="container-fluid">
+          <md-content class="md-padding" style="font-size:16px; padding-left: 15px; padding-top: 20px;">FILTER BY TYPE</md-content>
+          <md-divider ng-if="!$last"></md-divider>
+          <md-checkbox class="md-primary" ng-model="data.cb1" aria-label="Checkbox 1">PALE ALES</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb2" aria-label="Checkbox 1">INDIA PALE ALES</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb3" aria-label="Checkbox 1">STOUTS</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb4" aria-label="Checkbox 1">CIDERS</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb5" aria-label="Checkbox 1">LARGERS</md-checkbox>
+          <md-content class="md-padding" style="font-size:16px; padding-left: 15px; padding-top: 20px;">FILTER BY REGION</md-content>
+          <md-divider ng-if="!$last"></md-divider>
+          <md-checkbox class="md-primary" ng-model="data.cb6" aria-label="Checkbox 1">BRITISH COLUMBIA</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb7" aria-label="Checkbox 1">CALIFORNIA</md-checkbox> 
+          <md-checkbox class="md-primary" ng-model="data.cb8" aria-label="Checkbox 1">OREGON</md-checkbox>
+          <md-checkbox class="md-primary" ng-model="data.cb9" aria-label="Checkbox 1">WASHINGTON</md-checkbox>
+          </div>
+      </md-sidenav>
 <md-tabs class="md-accent" md-selected="selectedIndex" >
 	<md-tab ng-repeat="tab in tabs"
 	
 	label="{{tab.title}}"
 	ng-mousedown= "tabPredicate($index)">
 	<div class="demo-tab tab{{$index%4}}" layout="column" layout-fill layout-align="space-around left">
-
+	<div  class="detail-view">
 		<md-list>
 
-			<md-item ng-repeat="beer in beers | orderBy:predicate:reverse |filter:filters">
+			<md-item ng-repeat="beer in beers | orderBy:predicate:reverse |filter: searchText">
 				<md-card>
 					<md-item-content>
 
@@ -22,7 +43,7 @@
 					</div>
 					<div class="md-tile-content">
 					
-						<h3>{{beer.name}}</h3>
+						<a href="/beer>"><h3>{{beer.name}}</h3></a>
 						<h4>{{beer.favorite}}</h4>
 						<!-- <md-button class="md-primary" ng-click="showAdvanced($event)">Custom Dialog</md-button> -->
 
@@ -40,10 +61,12 @@
 
 
 		</md-list>
+		</div>
 	</md-tab>
 </md-tabs>
 </div>
 
+</div>
 </div>
 
 

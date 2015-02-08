@@ -16,7 +16,8 @@ var beerAppApp = angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMaterial'
+    'ngMaterial',
+    'ngResource'
 
     
   ])

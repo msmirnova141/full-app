@@ -115,6 +115,10 @@ md-content.md-padding {
   margin-left: 5px;
   width: 70px;
 } 
+
+.searchBtn {
+  color: white;
+}
 md-toolbar {
   height: 50px;
 

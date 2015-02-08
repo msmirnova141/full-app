@@ -1,4 +1,23 @@
+<header class="detail-view">
+		<span>{{beer.name}}</span>
+	</div>
+
+</header>
+
 <div ng-controller="beerCtrl">
-{{beer.name}};
-{{beer.info}};
+	<div class="container">
+		<section>
+			<p>{{beer.type}}</p>
+		</section>
+		<section>
+			<h3>Style</h3>
+
+			<p>{{beer.region}}</p>
+		</section>
+		<section>
+			<h3>About</h3>
+			<p>{{beer.status}}</p>
+		</section>
+
+	</div>
 </div>
